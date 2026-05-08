@@ -1,0 +1,11 @@
+[Cargo.toml skeleton for Rust core]
+[package]
+name = "pandaforged"
+version = "0.1.0"
+
+[dependencies]
+webview = "*"
+llama-cpp-rs = "*"  # placeholder
+skia-safe = "*"
+
+# Future: WebGPU, Qt bindings
