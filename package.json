@@ -1,0 +1,16 @@
+{
+  "name": "pandaforged-browser",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'PANDAFORGE BUILD FUSED' && vercel build",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@vercel/plugin": "latest"
+  },
+  "devDependencies": {
+    "vercel": "latest"
+  }
+}

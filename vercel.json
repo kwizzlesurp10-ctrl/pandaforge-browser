@@ -2,14 +2,20 @@
   "version": 2,
   "name": "pandaforged-browser",
   "builds": [
-    { "src": "public/**", "use": "@vercel/static" }
+    { "src": "public/**", "use": "@vercel/static" },
+    { "src": "api/**/*.js", "use": "@vercel/node" }
   ],
   "routes": [
+    { "src": "/api/oracle", "dest": "/api/panda-oracle.js" },
     { "src": "/(.*)", "dest": "/public/$1" }
+  ],
+  "plugins": [
+    "vercel/vercel-plugin"
   ],
   "env": {
     "PANDAFORGE_MODE": "production",
     "NEON_SUTURES": "glowing",
-    "LAUNCH_VELOCITY": "maximum"
+    "LAUNCH_VELOCITY": "maximum",
+    "PLUGIN_ACTIVATED": "true"
   }
 }
